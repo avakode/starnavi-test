@@ -31,7 +31,7 @@ function App() {
     const num = Number(item.dataset.item);
     const data = [...fields];
 
-    data[num] = { fill: !data[num].fill }
+    data[num] = { fill: !data[num].fill, id: num }
     setFields(data)
   }
 
@@ -84,7 +84,7 @@ function App() {
             {fields.length > 0 && (
               fields.filter(e => e.fill).map((element, index) =>
                 <span key={`span-${index}`}>
-                  {`row-${Math.trunc(index / currentMode.field) + 1} col-${(index + 1) % currentMode.field}`}
+                  {`row-${Math.trunc(element.id / currentMode.field) + 1} col-${(element.id) % currentMode.field + 1}`}
                 </span>
               )
             )}
