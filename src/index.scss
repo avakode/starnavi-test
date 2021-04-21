@@ -51,16 +51,28 @@ code {
 
   &.hardMode {
     width: 450px;
+
+    @media (max-width: 667px) {
+      width: 300px;
+
+      .item {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }
 
 .row {
   display: flex;
   align-items: flex-start;
+
+  @media (max-width: 991px) {
+    display: block;
+  }
 }
 
 .hover-text {
-  margin-top: -80px;
   margin-left: 30px;
   max-width: 450px;
 
@@ -77,6 +89,11 @@ code {
     width: 140px;
     text-align: center;
     background-color: #FBF8E3;
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 30px;
+    margin-left: 0;
   }
 }
 
